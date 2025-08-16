@@ -2,7 +2,7 @@
 
 A comprehensive implementation and comparison of different machine learning algorithms for image classification tasks, including digit recognition and face detection.
 
-## 📋 Table of Contents
+## Table of Contents
 - [Overview](#overview)
 - [Project Structure](#project-structure)
 - [Algorithms Implemented](#algorithms-implemented)
@@ -14,7 +14,7 @@ A comprehensive implementation and comparison of different machine learning algo
 - [Technical Details](#technical-details)
 
 
-## 🔍 Overview
+## Overview
 
 This project implements and compares three different machine learning approaches for image classification:
 
@@ -26,7 +26,7 @@ The project evaluates these algorithms on two distinct tasks:
 - **Digit Classification**: Recognizing handwritten digits (0-9)
 - **Face Detection**: Binary classification (face vs non-face)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── loaddata.py                     # Data loading and preprocessing utilities
@@ -51,7 +51,7 @@ The project evaluates these algorithms on two distinct tasks:
 └── README.md
 ```
 
-## 🤖 Algorithms Implemented
+## Algorithms Implemented
 
 ### 1. Multi-Class Perceptron
 - **Architecture**: One-vs-all classification with 10 binary perceptrons
@@ -80,7 +80,7 @@ The project evaluates these algorithms on two distinct tasks:
   - GPU acceleration support
   - Professional deep learning practices
 
-## 📊 Datasets
+## Datasets
 
 ### Digit Dataset
 - **Format**: 28×28 pixel images
@@ -94,7 +94,7 @@ The project evaluates these algorithms on two distinct tasks:
 - **Encoding**: ' ' = background, other characters = foreground
 - **Task**: Binary classification
 
-## 🔧 Requirements
+## Requirements
 
 ### Core Dependencies
 ```
