@@ -184,7 +184,7 @@ model = ThreeLayerNN(
 )
 ```
 
-## 📈 Results & Analysis
+## Results & Analysis
 
 ### Performance Metrics
 Each algorithm is evaluated on:
@@ -204,7 +204,7 @@ All implementations generate matplotlib plots showing:
 - Accuracy vs data percentage  
 - Standard deviation across multiple runs
 
-## 🔬 Technical Details
+## Technical Details
 
 ### Data Preprocessing
 - **Pixel Normalization**: Characters converted to binary (0/1) or normalized (0-1)
