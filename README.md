@@ -111,7 +111,7 @@ jupyter >= 1.0.0  # For notebook analysis
 scikit-learn >= 0.24.0  # For comparison metrics
 ```
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -133,7 +133,7 @@ scikit-learn >= 0.24.0  # For comparison metrics
 4. **Verify data structure**
    Ensure your `data/` folder contains the required datasets as shown in the project structure.
 
-## 💻 Usage
+## Usage
 
 ### Run Individual Algorithms
 
