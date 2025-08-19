@@ -31,11 +31,13 @@ The project evaluates these algorithms on two distinct computer vision tasks:
 ## Key Achievements
 
 - **Implemented 4 different ML algorithms from scratch** in Python
-- **Achieved 85-98% accuracy** on image classification tasks
+- **Achieved up to 97% accuracy** on digit classification (Custom Neural Network)
+- **Achieved 90% accuracy** on face detection (PyTorch implementation)
 - **Compared classical vs modern approaches** with comprehensive performance analysis
 - **Built complete ML pipeline**: data loading → preprocessing → training → evaluation → visualization
 - **Handled both binary and multiclass classification** problems
 - **Processed ASCII-formatted image data** and converted to numerical representations
+- **Optimized model performance** through hyperparameter tuning (epochs, normalization methods)
 
 ## Technologies Used
 
@@ -88,15 +90,17 @@ The project evaluates these algorithms on two distinct computer vision tasks:
 - **Architecture**: 4-layer network with 2 hidden layers (input → 64 → 32 → 1)
 - **Input Sizes**: 784 (digits) or 4200 (faces)
 - **Features**:
-  - ReLU activation for hidden layers
+  - ReLU activation for hidden layers (prevents overfitting)
   - Sigmoid activation for output layer
   - Dropout regularization (rate: 0.5) during forward pass
   - L2 regularization (λ = 0.001)
   - Xavier weight initialization
+  - Stochastic Gradient Descent (SGD) optimization
 - **Tasks**: 
-  - Face detection (face vs non-face)
-  - Digit binary classification (0 vs non-0 only)
-- **Note**: Does not perform multiclass digit classification (0-9)
+  - Face detection (face vs non-face): 75% accuracy
+  - Digit binary classification (0 vs non-0): 97% accuracy
+- **Training**: 20 epochs, 0.001 learning rate
+- **Note**: Implements backpropagation from scratch
 
 ### 4. PyTorch Neural Network
 - **Architecture**: 3-layer fully connected network (fc1 → fc2 → fc3)
@@ -106,6 +110,13 @@ The project evaluates these algorithms on two distinct computer vision tasks:
   - Cross-entropy loss (multiclass) / BCE loss (binary)
   - GPU acceleration support
   - Professional deep learning practices
+  - Configurable epochs (10, 25, 50 tested)
+- **Data Preprocessing**:
+  - Digits: Normalized pixel values (0→0.0, 1→0.5, 2→1.0)
+  - Faces: Binarized pixels (effective for edge-detected images)
+- **Performance Results**:
+  - Digits: Up to 90% accuracy (50 epochs with normalization)
+  - Faces: Consistent 90% accuracy across all epoch settings
 - **Tasks**: Both multiclass digit classification (0-9) and binary face detection
 
 ## Data Loading & Preprocessing
@@ -159,13 +170,13 @@ Each algorithm is evaluated on:
 - **Standard Deviation**: Consistency across runs
 - **Learning Curves**: Performance vs training data percentage
 
-### Expected Performance Ranges
-- **Perceptron (Digits 0-9)**: 70-85% accuracy
-- **Perceptron (Faces)**: 80-90% accuracy  
-- **Custom Neural Network (0 vs non-0 digits)**: 85-95% accuracy
-- **Custom Neural Network (Faces)**: 85-95% accuracy
-- **PyTorch Neural Network (Digits 0-9)**: 85-95% accuracy
-- **PyTorch Neural Network (Faces)**: 90-98% accuracy
+### Actual Performance Results
+- **Perceptron (Digits 0-9)**: 70% accuracy (at 100% training data)
+- **Perceptron (Faces)**: 85% accuracy (at 100% training data)  
+- **Custom Neural Network (Digits 0 vs non-0)**: 97% accuracy (at 100% training data)
+- **Custom Neural Network (Faces)**: 75% accuracy (at 100% training data)
+- **PyTorch Neural Network (Digits 0-9)**: Up to 90% accuracy (50 epochs, normalized data)
+- **PyTorch Neural Network (Faces)**: 90% accuracy (consistent across epochs)
 
 ### Visualization
 All implementations generate matplotlib plots showing:
@@ -214,10 +225,15 @@ if prediction ≠ actual:
 - **PyTorch Multiclass**: Normalized encoding (0 → 0.0, 1 → 0.5, 2 → 1.0)
 - **PyTorch Binary**: Binarized encoding (non-zero → 1, zero → 0)
 
-### Performance Optimization
-- Batch processing for efficiency
-- Random data shuffling per epoch
-- Multiple trial averaging (3 runs per configuration)
+### Performance Optimization & Key Findings
+- **Batch processing** for efficiency
+- **Random data shuffling** per epoch
+- **Multiple trial averaging** (3 runs per configuration)
+- **Hyperparameter tuning**: Tested 10, 25, and 50 epochs for optimal performance
+- **Data preprocessing optimization**: 
+  - Normalization vs binarization testing showed normalization improved digit accuracy from 50% to 60-70%
+  - Face classification performed well with binarized data due to edge-detection preprocessing
+- **Training efficiency**: Neural networks showed longer training times but significantly higher accuracy than perceptrons
 
 ## Usage
 
