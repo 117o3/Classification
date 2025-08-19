@@ -5,7 +5,7 @@ A comprehensive implementation and comparison of different machine learning algo
 ## Table of Contents
 - [Overview](#overview)
 - [Project Structure](#project-structure)
-- [Data Loading & Preprocessing](#data-loading-&-preprocessing)
+- [Data Loading & Preprocessing](#data-loading-and-preprocessing)
 - [Algorithms Implemented](#algorithms-implemented)
 - [Datasets](#datasets)
 - [Requirements](#requirements)
@@ -51,7 +51,7 @@ The project evaluates these algorithms on two distinct tasks:
 │       └── facedatavalidationlabels
 └── README.md
 ```
-## Data Loading & Preprocessing
+## Data Loading and Preprocessing
 
 ### loaddata.py
 Core utility module for loading and preprocessing ASCII-formatted image data.
