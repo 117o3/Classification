@@ -116,7 +116,7 @@ scikit-learn >= 0.24.0  # For comparison metrics
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd machine-learning-comparison
+   cd Digit-and-Face-Classification
    ```
 
 2. **Create virtual environment**
