@@ -5,6 +5,7 @@ A comprehensive implementation and comparison of different machine learning algo
 ## Table of Contents
 - [Overview](#overview)
 - [Project Structure](#project-structure)
+- [Data Loading & Preprocessing](#data-loading-&-preprocessing)
 - [Algorithms Implemented](#algorithms-implemented)
 - [Datasets](#datasets)
 - [Requirements](#requirements)
