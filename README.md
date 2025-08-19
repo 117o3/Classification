@@ -121,8 +121,8 @@ scikit-learn >= 0.24.0  # For comparison metrics
 
 2. **Create virtual environment**
    ```bash
-   python -m venv ml_env
-   source ml_env/bin/activate  # On Windows: ml_env\Scripts\activate
+   python3 -m venv venv
+   source venv/bin/activate
    ```
 
 3. **Install dependencies**
