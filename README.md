@@ -50,6 +50,33 @@ The project evaluates these algorithms on two distinct tasks:
 │       └── facedatavalidationlabels
 └── README.md
 ```
+## Data Loading & Preprocessing
+
+### loaddata.py
+Core utility module for loading and preprocessing ASCII-formatted image data.
+
+**Key Functions:**
+- `loadLabelsFile(filename)` - Reads classification labels from text files
+- `loadImagesFile(filename, num_labels, cols)` - Converts ASCII art images to numerical matrices
+- `IntegerConversionFunction(character)` - Maps ASCII characters to integers
+
+**Character Encoding:**
+```
+' ' (space) → 0    # Background pixels
+'+' (plus)  → 1    # Light foreground
+'#' (hash)  → 2    # Heavy foreground
+```
+
+**Usage Example:**
+```python
+from loaddata import loadLabelsFile, loadImagesFile
+
+# Load training data
+labels = loadLabelsFile("data/digitdata/traininglabels")
+images = loadImagesFile("data/digitdata/trainingimages", len(labels), 28)
+```
+
+The module validates file integrity and handles both 28×28 digit images and 70×60 face images, converting text-based representations into arrays suitable for machine learning algorithms.
 
 ## Algorithms Implemented
 
